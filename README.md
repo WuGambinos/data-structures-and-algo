@@ -1,4 +1,4 @@
-# DataStructures
+# Data Structures
 
 
-DataStructure Implementations and Problems
+Data Structure Implementations and Problems
