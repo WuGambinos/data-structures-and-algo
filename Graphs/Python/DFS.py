@@ -47,70 +47,8 @@ v6.add_neighbors(v5)
 
 
 
-"""
-def dfs(root):
 
-    visited = set()
-    stack = []
-    stack.append(root)
-    visited.add(root)
-
-    while(stack != []):
-
-        node = stack.pop()
-        
-        if(node not in visited):
-            print(node , end= " ")
-            visited.add(node)
-        
-        for n in node.neighbors:
-            if n not in visited:
-
-                stack.append(n)
-            visited.add(node)
-    
-    print(visited)
-"""
-
-# Using a Python dictionary to act as an adjacency list
-graph = {
-    'A' : ['B','C', 'D', "E"],
-    'B' : ['C', 'G'],
-    'C' : ['A','B', 'D'],
-    'D' : ['A', 'C', 'E', 'H'],
-    'E' : ['A', 'D', 'F'],
-    'F' : ['E','G', 'H'],
-    'G': ['B', 'F'],
-    'H': ['D', 'F'],
-
-}
-
-visited = set() # Set to keep track of visited nodes.
-
-"""
-def dfs(visited, graph, node):
-    if node not in visited:
-        print (node)
-        visited.add(node)
-        for neighbour in graph[node]:
-            dfs(visited, graph, neighbour)
-"""
-
-def dfs(visited, graph, node):
-    stack = []
-
-    stack.append(node)
-    while(stack != []):
-
-        n = stack.pop()
-
-        if(n not in visited):
-            visited.add(n)
-            print(n)
-        
-        for neighbor in graph[node]:
-            if(neighbor not in visited):
-                stack.append(neighbor)
 
 # Driver Code
-dfs(visited, graph, 'A')
+#dfs(visited, graph, 'A')
+dfs(v2)
