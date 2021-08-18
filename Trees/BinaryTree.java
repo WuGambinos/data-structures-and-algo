@@ -43,6 +43,39 @@ class BinaryTree
 		}
 	}
 
+	// Iterative function to perform postorder traversal on the tree
+    public static void postorderIterative(Node root)
+    {
+        // create an empty stack and push the root node
+        Stack<Node> stack = new Stack<Node>();
+        stack.push(root);
+    
+        // create another stack to store postorder traversal
+        Stack<Integer> out = new Stack<Integer>();
+    
+        // loop till stack is empty
+        while (!stack.empty())
+        {
+            // pop a node from the stack and push the data into the output stack
+            Node curr = stack.pop();
+            out.push(curr.data);
+    
+            // push the left and right child of the popped node into the stack
+            if (curr.left != null) {
+                stack.push(curr.left);
+            }
+    
+            if (curr.right != null) {
+                stack.push(curr.right);
+            }
+        }
+    
+        // print postorder traversal
+        while (!out.empty()) {
+            System.out.print(out.pop() + " ");
+        }
+    }
+
 	public static void main(String args[])
 	{
 
