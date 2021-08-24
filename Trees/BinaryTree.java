@@ -15,6 +15,7 @@ class BinaryTree
 
 		Stack<Node> s = new Stack<Node>();
 		Node curr = root;
+		
 
 		// traverse the tree
 		while (curr != null || s.size() > 0)

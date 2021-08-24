@@ -1,1 +1,6 @@
-HELLO WORLD
+LEARNED
+
+  * DFS 
+
+  * BFS
+
