@@ -1,4 +1,4 @@
-package Graphs.Java;
+package graphs.java;
 
 import java.util.HashSet;
 import java.util.Set;
