@@ -5,13 +5,26 @@ public class Graph {
     ArrayList<GraphNode> nodeList;
     int[][] adjacencyMatrix;
 
-    public Graph(ArrayList<GraphNode> nodeList) {
-        this.nodeList = nodeList;
-        this.adjacencyMatrix = new int[nodeList.size()][nodeList.size()];
+    boolean type;
+
+    public Graph(ArrayList<GraphNode> nodeList, boolean type) {
+        
+        if(type) {
+            this.nodeList = nodeList;
+            this.adjacencyMatrix = new int[nodeList.size()][nodeList.size()];
+            this.type = type;
+        }
+
+        else {
+            this.nodeList = nodeList;
+            this.type = type;
+
+        }
 
     }
 
     public void addUndirectedEdge(int i, int j) {
+
         adjacencyMatrix[i][j] = 1;
         adjacencyMatrix[j][i] = 1;
     }
